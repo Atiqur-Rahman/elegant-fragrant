@@ -1,0 +1,74 @@
+[
+    {
+        "id": "1ab",
+        "name": "Lilac",
+        "price": 50,
+        "img": "./images/Lilac.png"
+    },
+    {
+        "id": "2bc",
+        "name": "Mock Orange",
+        "price": 80,
+        "img": "./images/Mock Orange.png"
+    },
+    {
+        "id": "3cd",
+        "name": "Chocolate Vine",
+        "price": 70,
+        "img": "./images/Chocolate Vine.png"
+    },
+    {
+        "id": "4de",
+        "name": "Honeysuckle",
+        "price": 65,
+        "img": "./images/Honeysuckle.png"
+    },
+    {
+        "id": "5ef",
+        "name": "Garlic Creeper",
+        "price": 85,
+        "img": "./images/Garlic Creeper.png"
+    },
+    {
+        "id": "6fg",
+        "name": "Black Rose",
+        "price": 95,
+        "img": "./images/Black Rose.png"
+    },
+    {
+        "id": "7gh",
+        "name": "Plumeria",
+        "price": 75,
+        "img": "./images/Plumeria.png"
+    },
+    {
+        "id": "8hi",
+        "name": "Chameli",
+        "price": 55,
+        "img": "./images/chameli.png"
+    },
+    {
+        "id": "9ij",
+        "name": "Rangoon creeper",
+        "price": 75,
+        "img": "./images/Rangoon creeper.png"
+    },
+    {
+        "id": "10jk",
+        "name": "Sweet Violet",
+        "price": 98,
+        "img": "./images/Sweet Violet.png"
+    },
+    {
+        "id": "11kl",
+        "name": "Yellow Jasmine",
+        "price": 87,
+        "img": "./images/Yellow Jasmine.png"
+    },
+    {
+        "id": "12lm",
+        "name": "Rose",
+        "price": 99,
+        "img": "./images/Rose.png"
+    }
+]
