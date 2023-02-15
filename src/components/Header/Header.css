@@ -1,5 +1,9 @@
 .name {
     /* color: rgba(147, 45, 255, 0.914); */
-    color: rgb(2, 117, 216);
+    color: #0d6efd;
     padding-top: 24px;
+    text-align: center;
+}
+.items {
+    text-align: center;
 }

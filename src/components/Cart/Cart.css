@@ -1,0 +1,26 @@
+.cart h2 {
+    margin-top: 60px;
+    margin-left: 40px;
+}
+.cart-item {
+    margin-top: 30px;
+    margin-left: 60px;
+}
+.cart-item img {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+}
+.cart-item span {
+    margin-left: 20px;
+    font-size: 20px;
+}
+/* .cart-item div {
+    display: flex;
+    align-items: center;
+} */
+.item-info {
+    display: flex;
+    align-items: center;
+    /* position: relative; */
+}
