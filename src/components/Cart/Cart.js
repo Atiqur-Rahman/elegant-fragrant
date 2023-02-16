@@ -15,7 +15,7 @@ const Cart = ({ cart }) => {
                             <img src={item.img} alt="" />
                             <span>{item.name}</span>
                         </p>
-                        <p style={{ position: 'absolute', right: '320px' }}>
+                        <p className="icon" style={{ position: 'absolute', right: '320px' }}>
                             <FontAwesomeIcon icon={faTrash}></FontAwesomeIcon>
                         </p>
                     </div>
