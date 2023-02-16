@@ -1,9 +1,15 @@
+.cart {
+    margin: 60px 0;
+}
 .cart h2 {
-    margin-top: 60px;
+    /* margin-top: 60px; */
+    margin-left: 40px;
+}
+.cart button {
     margin-left: 40px;
 }
 .cart-item {
-    margin-top: 30px;
+    margin: 30px 0;
     margin-left: 60px;
 }
 .cart-item img {
@@ -22,7 +28,7 @@
 .item-info {
     display: flex;
     align-items: center;
-    /* position: relative; */
+    position: relative;
 }
 .icon:hover {
     color: red;
