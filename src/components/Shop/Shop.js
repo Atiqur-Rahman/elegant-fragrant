@@ -3,6 +3,7 @@ import './Shop.css';
 import Product from '../Product/Product';
 import Cart from '../Cart/Cart';
 import Swal from 'sweetalert2';
+import Question from '../Question/Question';
 
 const Shop = () => {
     const [products, setProducts] = useState([]);
@@ -63,10 +64,13 @@ const Shop = () => {
 
     return (
         <div className="shop-container">
-            <div className="product-container">
-                {products.map((product) => (
-                    <Product product={product} key={product.id} handleAddToCart={handleAddToCart}></Product>
-                ))}
+            <div>
+                <div className="product-container">
+                    {products.map((product) => (
+                        <Product product={product} key={product.id} handleAddToCart={handleAddToCart}></Product>
+                    ))}
+                </div>
+                <Question></Question>
             </div>
             <div className="cart-container">
                 <Cart cart={cart} handleDeleteItemFromCart={handleDeleteItemFromCart} handleRemoveAllFromCart={handleRemoveAllFromCart} handleSelectOneFromCart={handleSelectOneFromCart}></Cart>
