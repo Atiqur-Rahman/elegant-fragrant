@@ -4,6 +4,7 @@ import Product from '../Product/Product';
 import Cart from '../Cart/Cart';
 import Swal from 'sweetalert2';
 import Question from '../Question/Question';
+import { addToDb, deleteShoppingCart, getStoredCart, removeFromDb } from '../../utilities/fakedb';
 
 const Shop = () => {
     const [products, setProducts] = useState([]);
@@ -15,11 +16,26 @@ const Shop = () => {
             .then((data) => setProducts(data));
     }, []);
 
+    useEffect(() => {
+        const storedCart = getStoredCart();
+        const savedCart = [];
+        for (const id in storedCart) {
+            const addedProduct = products.find((product) => product.id === id);
+            if (addedProduct) {
+                // const quantity = storedCart[id];
+                // addedProduct.quantity = quantity;
+                savedCart.push(addedProduct);
+            }
+        }
+        setCart(savedCart);
+    }, [products]);
+
     const handleAddToCart = (selectedProduct) => {
         console.log(selectedProduct);
         const exists = cart.find((product) => product.id === selectedProduct.id);
         let newCart = [...cart];
         if (!exists) {
+            console.log(newCart.length);
             if (newCart.length < 4) {
                 newCart = [...cart, selectedProduct];
             } else {
@@ -37,6 +53,7 @@ const Shop = () => {
             });
         }
         setCart(newCart);
+        addToDb(selectedProduct.id);
     };
 
     const handleDeleteItemFromCart = (deletedProduct) => {
@@ -48,18 +65,23 @@ const Shop = () => {
         }
         let updatedCart = [...cart];
         setCart(updatedCart);
+        removeFromDb(deletedProduct.id);
     };
 
     const handleRemoveAllFromCart = () => {
         let updatedCart = [];
         setCart(updatedCart);
+        deleteShoppingCart();
     };
 
     const handleSelectOneFromCart = () => {
         const selectedOne = Math.floor(Math.random() * cart.length);
         const updateCart = [cart[selectedOne]];
+        // console.log(cart[selectedOne].id);
 
         setCart(updateCart);
+        deleteShoppingCart();
+        addToDb(cart[selectedOne].id);
     };
 
     return (
