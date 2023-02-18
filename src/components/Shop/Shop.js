@@ -22,8 +22,6 @@ const Shop = () => {
         for (const id in storedCart) {
             const addedProduct = products.find((product) => product.id === id);
             if (addedProduct) {
-                // const quantity = storedCart[id];
-                // addedProduct.quantity = quantity;
                 savedCart.push(addedProduct);
             }
         }
@@ -77,7 +75,6 @@ const Shop = () => {
     const handleSelectOneFromCart = () => {
         const selectedOne = Math.floor(Math.random() * cart.length);
         const updateCart = [cart[selectedOne]];
-        // console.log(cart[selectedOne].id);
 
         setCart(updateCart);
         deleteShoppingCart();
