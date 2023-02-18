@@ -89,10 +89,14 @@ const Shop = () => {
             <div>
                 <div className="product-container">
                     {products.map((product) => (
-                        <Product product={product} key={product.id} handleAddToCart={handleAddToCart}></Product>
+                        <div>
+                            <Product product={product} key={product.id} handleAddToCart={handleAddToCart}></Product>
+                        </div>
                     ))}
                 </div>
-                <Question></Question>
+                <div className="product-question">
+                    <Question></Question>
+                </div>
             </div>
             <div className="cart-container">
                 <Cart cart={cart} handleDeleteItemFromCart={handleDeleteItemFromCart} handleRemoveAllFromCart={handleRemoveAllFromCart} handleSelectOneFromCart={handleSelectOneFromCart}></Cart>
